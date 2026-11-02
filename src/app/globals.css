@@ -3,14 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #f8fafc; /* tailwind slate-50 */
-  --foreground: #1e293b; /* tailwind slate-800 */
+  --background: #fffdf5; /* 따뜻하고 눈이 편안한 파스텔 웜 크림 옐로우 */
+  --foreground: #1c1917;
 }
 
-/* 눈이 편안하고 깔끔한 화이트/슬레이트 베이스에 따뜻한 옐로우/앰버 포인트를 주는 테마 */
 body {
-  color: #1e293b;
-  background-color: #f8fafc;
+  color: #1c1917;
+  background-color: #fffdf5;
   font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
   -webkit-tap-highlight-color: transparent;
   word-break: keep-all;
@@ -50,12 +49,12 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #fef3c7;
+  background: #fef9c3;
 }
 ::-webkit-scrollbar-thumb {
-  background: #fcd34d;
+  background: #fde047;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #f59e0b;
+  background: #facc15;
 }
