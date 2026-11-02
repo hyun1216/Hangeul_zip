@@ -28,8 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="min-h-screen bg-slate-50 text-slate-800 antialiased selection:bg-amber-200 selection:text-amber-900">
-        <div className="mx-auto flex min-h-screen max-w-5xl flex-col bg-slate-50 shadow-sm sm:border-x sm:border-slate-200/70">
+      <body className="min-h-screen bg-slate-50 text-gray-900 antialiased selection:bg-amber-100 selection:text-amber-900">
+        <div className="mx-auto flex min-h-screen w-full max-w-screen-xl flex-col bg-slate-50">
           {children}
         </div>
       </body>
