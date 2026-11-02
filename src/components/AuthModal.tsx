@@ -47,40 +47,40 @@ export default function AuthModal({
     <div
       role="dialog"
       aria-modal="true"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-yellow-950/40 backdrop-blur-sm animate-fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm animate-fade-in"
       onClick={onClose}
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-sm rounded-[32px] border border-amber-200 bg-yellow-50 p-6 shadow-2xl animate-slide-up text-center relative"
+        className="w-full max-w-sm rounded-[32px] border border-slate-200 bg-white p-6 shadow-2xl animate-slide-up text-center relative"
       >
         {/* 상단 닫기 X 버튼 */}
         <button
           type="button"
           onClick={onClose}
           aria-label="닫기"
-          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-amber-100 text-amber-800 transition hover:bg-amber-200"
+          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition hover:bg-slate-200"
         >
           <X className="h-4 w-4 stroke-[2.5]" />
         </button>
 
-        {/* 귀여운 캐릭터/이모지 뱃지 */}
-        <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-3xl bg-amber-200/80 shadow-inner text-3xl">
+        {/* 귀여운 캐릭터/이모지 뱃지 (포인트 영역) */}
+        <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-3xl bg-amber-100 border border-amber-200 text-3xl">
           <span role="img" aria-label="반짝이는 별">
             ⭐
           </span>
         </div>
 
         {/* 헤드라인 문구 */}
-        <div className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800 mb-2">
+        <div className="inline-flex items-center gap-1 rounded-full bg-amber-100 border border-amber-200 px-3 py-1 text-xs font-bold text-amber-900 mb-2">
           <Sparkles className="h-3 w-3 text-amber-600" />
           <span>3초 간편 시작</span>
         </div>
 
-        <h3 className="text-xl font-black text-yellow-950">
+        <h3 className="text-xl font-black text-slate-900">
           로그인 후 이용할 수 있어요!
         </h3>
-        <p className="mt-2 text-xs font-medium text-gray-600 leading-relaxed">
+        <p className="mt-2 text-xs font-normal text-slate-600 leading-relaxed">
           <strong className="text-amber-800 font-bold">[{triggerActionName}]</strong>
           은 회원 전용 무료 혜택입니다. 가입 즉시 모든 단계 PDF와 부모 해설지를 무제한으로 보실 수 있어요.
         </p>
@@ -91,7 +91,7 @@ export default function AuthModal({
           <button
             type="button"
             onClick={() => handleOAuthLogin('kakao')}
-            className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#FEE500] py-3.5 px-4 text-xs sm:text-sm font-extrabold text-[#191919] shadow-sm transition hover:brightness-95 active:scale-98"
+            className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#FEE500] py-3.5 px-4 text-xs sm:text-sm font-extrabold text-[#191919] shadow-sm transition hover:brightness-95 active:scale-[0.98]"
           >
             <svg
               className="h-4 w-4 fill-current"
@@ -107,7 +107,7 @@ export default function AuthModal({
           <button
             type="button"
             onClick={() => handleOAuthLogin('google')}
-            className="flex w-full items-center justify-center gap-2 rounded-2xl border border-gray-200 bg-white py-3.5 px-4 text-xs sm:text-sm font-extrabold text-gray-800 shadow-sm transition hover:bg-gray-50 active:scale-98"
+            className="flex w-full items-center justify-center gap-2 rounded-2xl border border-slate-300 bg-white py-3.5 px-4 text-xs sm:text-sm font-extrabold text-slate-800 shadow-sm transition hover:bg-slate-50 active:scale-[0.98]"
           >
             <svg className="h-4 w-4" viewBox="0 0 24 24">
               <path
@@ -136,7 +136,7 @@ export default function AuthModal({
           <button
             type="button"
             onClick={onClose}
-            className="text-xs font-semibold text-gray-500 underline underline-offset-4 hover:text-amber-800 transition"
+            className="text-xs font-semibold text-slate-500 underline underline-offset-4 hover:text-slate-800 transition"
           >
             로그인 없이 둘러보기
           </button>

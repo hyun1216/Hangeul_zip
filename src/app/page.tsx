@@ -77,7 +77,6 @@ export default function Home() {
       return;
     }
 
-    // 로그인된 상태일 때 다운로드 안내 시뮬레이션
     alert(`🎉 [${worksheet.title}] 학습지 PDF 다운로드를 시작합니다!\n집에서 A4 용지로 편하게 인쇄해 주세요.`);
   };
 
@@ -88,7 +87,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-slate-50">
       {/* 글로벌 상단 헤더 */}
       <Header
         isLoggedIn={isLoggedIn}
@@ -104,55 +103,55 @@ export default function Home() {
 
       {/* 메인 콘텐츠 영역 */}
       <main className="flex-1 px-4 py-6 sm:px-6 sm:py-8 space-y-8">
-        {/* 따뜻한 히어로 소개 섹션 */}
-        <section className="rounded-3xl border border-amber-200/80 bg-gradient-to-b from-white/90 via-amber-50/70 to-yellow-50/90 p-6 sm:p-8 text-center shadow-sm">
-          <div className="inline-flex items-center gap-1.5 rounded-full bg-amber-200/80 px-3.5 py-1 text-xs font-black text-amber-900 mb-3 shadow-sm">
+        {/* 깔끔한 솔리드 화이트 히어로 소개 섹션 (그라데이션 제거, 텍스트 가독성 최우선) */}
+        <section className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 text-center shadow-sm">
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-amber-100 border border-amber-200 px-3.5 py-1 text-xs font-bold text-amber-900 mb-3 shadow-sm">
             <Star className="h-3.5 w-3.5 fill-amber-500 text-amber-500" />
             <span>엄마표·아빠표 한글 파닉스 첫걸음</span>
           </div>
 
-          <h1 className="text-2xl font-black tracking-tight text-yellow-950 sm:text-3xl md:text-4xl leading-tight">
+          <h1 className="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl md:text-4xl leading-tight">
             비싼 학습지 대신, <br className="sm:hidden" />
-            <span className="text-amber-700 underline decoration-amber-300 decoration-wavy decoration-2">
+            <span className="text-amber-800 underline decoration-amber-300 decoration-wavy decoration-2">
               집에서 하루 15분
             </span>{' '}
             놀이하듯 배워요!
           </h1>
 
-          <p className="mx-auto mt-3 max-w-xl text-xs sm:text-sm font-medium text-amber-900/80 leading-relaxed">
-            아이에게는 인쇄해서 쓰는 흥미진진한 <strong>프린트 학습지(PDF)</strong>를, <br className="hidden sm:inline" />
-            부모님에게는 스마트폰으로 보면서 바로 가르치는 <strong>1:1 모바일 해설지</strong>를 드려요.
+          <p className="mx-auto mt-3 max-w-xl text-xs sm:text-sm font-normal text-slate-600 leading-relaxed">
+            아이에게는 인쇄해서 쓰는 흥미진진한 <strong className="text-slate-800 font-semibold">프린트 학습지(PDF)</strong>를, <br className="hidden sm:inline" />
+            부모님에게는 스마트폰으로 보면서 바로 가르치는 <strong className="text-slate-800 font-semibold">1:1 모바일 해설지</strong>를 드려요.
           </p>
 
           {/* 서비스 3대 핵심 특징 카드 */}
-          <div className="mt-6 grid grid-cols-1 gap-2.5 sm:grid-cols-3 text-left">
-            <div className="flex items-center gap-3 rounded-2xl bg-white/80 p-3.5 border border-amber-100">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-800">
+          <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3 text-left">
+            <div className="flex items-center gap-3 rounded-2xl bg-slate-50 p-3.5 border border-slate-200">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100 border border-amber-200 text-amber-800">
                 <BookMarked className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-xs font-bold text-yellow-950">소릿값 파닉스 교육</h4>
-                <p className="text-[11px] text-gray-500">ㄱ(그)+ㅏ(아)=가 원리</p>
+                <h4 className="text-xs font-bold text-slate-800">소릿값 파닉스 교육</h4>
+                <p className="text-[11px] text-slate-500">ㄱ(그)+ㅏ(아)=가 원리</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 rounded-2xl bg-white/80 p-3.5 border border-amber-100">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-800">
+            <div className="flex items-center gap-3 rounded-2xl bg-slate-50 p-3.5 border border-slate-200">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100 border border-amber-200 text-amber-800">
                 <Printer className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-xs font-bold text-yellow-950">A4 무제한 프린트</h4>
-                <p className="text-[11px] text-gray-500">고화질 PDF 즉시 출력</p>
+                <h4 className="text-xs font-bold text-slate-800">A4 무제한 프린트</h4>
+                <p className="text-[11px] text-slate-500">고화질 PDF 즉시 출력</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 rounded-2xl bg-white/80 p-3.5 border border-amber-100">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-800">
+            <div className="flex items-center gap-3 rounded-2xl bg-slate-50 p-3.5 border border-slate-200">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100 border border-amber-200 text-amber-800">
                 <Smartphone className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-xs font-bold text-yellow-950">모바일 부모 해설지</h4>
-                <p className="text-[11px] text-gray-500">대화 예시·칭찬 팁 제공</p>
+                <h4 className="text-xs font-bold text-slate-800">모바일 부모 해설지</h4>
+                <p className="text-[11px] text-slate-500">대화 예시·칭찬 팁 제공</p>
               </div>
             </div>
           </div>
@@ -161,10 +160,10 @@ export default function Home() {
         {/* Step 1: 4단계 카테고리 탭 네비게이션 */}
         <section>
           <div className="mb-3 flex items-center justify-between px-1">
-            <h2 className="text-sm font-black text-yellow-950 flex items-center gap-1.5">
+            <h2 className="text-sm font-black text-slate-900 flex items-center gap-1.5">
               <span>단계별 커리큘럼 선택</span>
             </h2>
-            <span className="text-xs font-semibold text-amber-700">
+            <span className="text-xs font-bold text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full">
               현재: {activeCategoryMeta.badge}
             </span>
           </div>
@@ -179,14 +178,14 @@ export default function Home() {
         <section className="space-y-4">
           <div className="flex items-center justify-between px-1">
             <div>
-              <h3 className="text-base font-black text-yellow-950 sm:text-lg">
+              <h3 className="text-base font-black text-slate-900 sm:text-lg">
                 {activeCategoryMeta.name} 학습지 모음
               </h3>
-              <p className="text-xs font-medium text-gray-500">
+              <p className="text-xs font-normal text-slate-500">
                 아이의 성향과 속도에 맞춰 한 주에 한 장씩 천천히 즐겨보세요.
               </p>
             </div>
-            <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">
+            <span className="rounded-full bg-amber-100 border border-amber-200 px-3 py-1 text-xs font-bold text-amber-900">
               총 {filteredWorksheets.length}권의 학습지
             </span>
           </div>
@@ -194,7 +193,7 @@ export default function Home() {
           {loading ? (
             <div className="py-16 text-center">
               <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-amber-400 border-t-transparent" />
-              <p className="mt-3 text-xs font-bold text-amber-800">학습지를 불러오고 있어요...</p>
+              <p className="mt-3 text-xs font-bold text-slate-700">학습지를 불러오고 있어요...</p>
             </div>
           ) : filteredWorksheets.length > 0 ? (
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -208,8 +207,8 @@ export default function Home() {
               ))}
             </div>
           ) : (
-            <div className="rounded-3xl border border-dashed border-amber-200 bg-white/60 p-12 text-center">
-              <p className="text-sm font-bold text-gray-500">
+            <div className="rounded-3xl border border-dashed border-slate-300 bg-white p-12 text-center">
+              <p className="text-sm font-medium text-slate-500">
                 해당 단계의 새로운 학습지가 곧 발행될 예정입니다! ✨
               </p>
             </div>

@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #fffbeb; /* tailwind yellow-50 */
-  --foreground: #78350f; /* tailwind amber-900 */
+  --background: #f8fafc; /* tailwind slate-50 */
+  --foreground: #1e293b; /* tailwind slate-800 */
 }
 
-/* 시스템 다크모드 강제 덮어쓰기: 본 서비스는 눈이 편안한 파스텔 웜톤(해·달·별·우주) 테마 유지 */
+/* 눈이 편안하고 깔끔한 화이트/슬레이트 베이스에 따뜻한 옐로우/앰버 포인트를 주는 테마 */
 body {
-  color: #78350f;
-  background-color: #fffbeb;
+  color: #1e293b;
+  background-color: #f8fafc;
   font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
   -webkit-tap-highlight-color: transparent;
   word-break: keep-all;
